@@ -1,7 +1,4 @@
-import { createServer } from "http"
-const httpsServer = createServer()
-
-const io = require("socket.io")(httpsServer, {
+const io = require("socket.io")("https", {
     cors: {
         origin: process.env.CLIENT_URL,
         Credential: true
