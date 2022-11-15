@@ -1,4 +1,4 @@
-const {createServer} =  require("https")
+import { createServer } from "http"
 const httpsServer = createServer()
 
 const io = require("socket.io")(httpsServer, {
