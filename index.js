@@ -1,4 +1,4 @@
-const io = require("socket.io")("https", {
+const io = require("socket.io")(4000, {
     cors: {
         origin: process.env.CLIENT_URL,
         Credential: true
