@@ -1,4 +1,7 @@
-const io = require("socket.io")(4000, {
+import {createServer} from "https"
+const httpsServer = createServer()
+
+const io = require("socket.io")(httpsServer, {
     cors: {
         origin: process.env.CLIENT_URL,
     },
