@@ -4,6 +4,7 @@ const httpsServer = createServer()
 const io = require("socket.io")(httpsServer, {
     cors: {
         origin: process.env.CLIENT_URL,
+        Credential: true
     },
 })
 
